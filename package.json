@@ -1,0 +1,30 @@
+{
+  "name": "cypress-cucumber",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "cypress": "^8.3.0",
+    "cypress-cucumber-preprocessor": "^4.2.0"
+  },
+  "devDependencies": {
+    "cucumber-html-reporter": "^5.5.0"
+  },
+  "scripts": {
+    "test": "npx cypress open",
+    "cypress:run": "cypress run ",
+    "postcypress:run": "node ./cypress/support/cucumber-html-reporter.js"
+  },
+  "cypress-cucumber-preprocessor": {
+    "step_definitions": "cypress/support/steps",
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".json"
+    }
+   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
